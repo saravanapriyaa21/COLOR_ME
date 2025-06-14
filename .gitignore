@@ -1,1 +1,29 @@
+# Node (Express Backend)
 node_modules/
+npm-debug.log
+.env
+
+# Python (Flask App)
+__pycache__/
+*.py[cod]
+env/
+venv/
+*.env
+
+# macOS system files
+.DS_Store
+
+# React (Frontend)
+build/
+dist/
+.cache/
+*.log
+
+# VSCode config
+.vscode/
+
+# OS files
+Thumbs.db
+
+# Image generation output
+server/image_data/output/
