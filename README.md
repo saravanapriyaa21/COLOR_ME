@@ -1,1 +1,1 @@
-# COLOR-
+# COLORÉ - color your space, your way
