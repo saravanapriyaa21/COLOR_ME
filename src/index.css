@@ -1,0 +1,438 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Copperplate&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------- Login Page Styling -------------------- */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("back_ground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.form-card {
+  width: 400px;
+  padding: 24px;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.form-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #2563eb;
+}
+
+.form-toggle {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+.form-toggle:hover {
+  text-decoration: underline;
+}
+
+/* -------------------- Dashboard Page Styling -------------------- */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcome {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #555;
+}
+
+.page-content {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  background-color: #f4f4f4;
+}
+
+/* -------------------- Colors Page Styling -------------------- */
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.color-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: 120px;
+  text-align: center;
+}
+
+.color-swatch {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 0.5rem;
+}
+
+.color-name {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: #333;
+  margin: 0;
+  text-align: center;
+}
+
+
+/* -------------------- Image Upload Preview Styling -------------------- */
+.image-frame {
+  margin-top: 1rem;
+  max-width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+}
+
+.uploaded-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* -------------------- Home Page Styling -------------------- */
+.homepage-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 64px;
+  background-color: #f9f9f9;
+}
+
+.photo-container {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.animated-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: revealFromLeft 1.2s ease-out forwards;
+  clip-path: inset(0 100% 0 0);
+}
+
+@keyframes revealFromLeft {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.page-title {
+  font-family: 'Copperplate', serif;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+}
+
+.page-subtitle {
+  font-family: 'Lucida Handwriting', 'Lucida Sans Unicode', cursive;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #555;
+  font-style: italic;
+}
+
+.color-grid-container {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+.color-grid-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.color-grid-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.color-grid-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.color-grid-container::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 294px);
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+  width: max-content;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .color-grid {
+    grid-template-columns: repeat(auto-fit, minmax(294px, 1fr));
+    width: 100%;
+  }
+  .color-grid-container {
+    overflow-x: visible;
+  }
+}
+
+.color-card {
+  width: 294px;
+  height: 294px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.color-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.color-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.color-card:hover .color-image {
+  transform: scale(1.05);
+}
+
+.color-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  padding: 1rem;
+}
+
+.color-name {
+  font-family: "Lucida Handwriting", "Lucida Sans Unicode", cursive;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+/* -------------------- Color Detail Page Styling -------------------- */
+.color-detail-page {
+  min-height: calc(100vh - 80px);
+  background-color: #f9fafb;
+  padding: 2rem;
+}
+
+.color-detail-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+@media (min-width: 768px) {
+  .color-detail-page .container {
+    flex-direction: row;
+  }
+}
+
+.carousel-container {
+  width: 550px;
+  height: 457px;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 549px;
+  height: 457px;
+  object-fit: cover;
+}
+
+.details-container {
+  flex: 1;
+  height: 457px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.color-name {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.color-description {
+  font-size: 1rem;
+  color: #374151;
+  margin-bottom: 1.5rem;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.section h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.specs-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.specs-list li {
+  margin-bottom: 0.25rem;
+}
+
+.center-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.error-text {
+  color: red;
+  font-size: 1.5rem;
+}
+
+/*------------------------------Colored Room Page Styles----------------------- */
+
+.room-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.room-base-image {
+  width: 100%;
+  display: block;
+}
+
+.walls-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mix-blend-mode: multiply;
+}
