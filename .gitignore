@@ -4,7 +4,7 @@ npm-debug.log
 .env
 
 # Python (Flask App)
-__pycache__/
+_pycache_/
 *.py[cod]
 env/
 venv/
@@ -27,3 +27,7 @@ Thumbs.db
 
 # Image generation output
 server/image_data/output/
+
+# Credentials
+*.json
+colore-service-account.json

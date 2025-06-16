@@ -6,23 +6,26 @@ const app = express();
 const port = 3000;
 
 app.use(cors());
-app.use(express.json()); // Required to parse JSON bodies
+app.use(express.json());
 
 const uri = "mongodb+srv://saravanapriyaa:a4aSLfRNHRZE9%3A4@paint-app.vgl8nua.mongodb.net/?retryWrites=true&w=majority&appName=paint-app";
-const client = new MongoClient(uri);
+
+const client = new MongoClient(uri, {
+  serverSelectionTimeoutMS: 5000, // timeout after 5 seconds if can't connect
+});
 
 let db, usersCollection, colorsCollection;
 
 async function init() {
   try {
     await client.connect();
-    db = client.db("paint_app");
+    db = client.db("paint_app"); // change if your DB name is different
     usersCollection = db.collection("users");
     colorsCollection = db.collection("colors");
-
-    console.log("Connected to MongoDB Atlas!");
+    console.log("✅ Connected to MongoDB Atlas!");
   } catch (err) {
-    console.error("MongoDB connection error:", err);
+    console.error("❌ MongoDB connection error:", err.message);
+    process.exit(1);
   }
 }
 init();
@@ -74,7 +77,7 @@ app.post("/api/signup", async (req, res) => {
     const newUser = {
       username,
       email,
-      password_hash: password,  // Save it to password_hash
+      password_hash: password,
       base_color: "",
       liked_palettes: [],
       uploads: [],
@@ -92,7 +95,5 @@ app.post("/api/signup", async (req, res) => {
 
 // ---------------- START SERVER ----------------
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`🚀 Server running at http://localhost:${port}`);
 });
-
-
