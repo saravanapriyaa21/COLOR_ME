@@ -5,7 +5,8 @@ COLORÉ lets you try out wall colors on your own room photos—instantly. Just u
 Powered by AI, MongoDB, and a bit of magic,
 Built with love using React, Flask, and Google Cloud.
 ---
-##Live Demo  
+## Live Demo  
+
 Frontend Link(App hosted)- https://colorme-463016.web.app  
 Backend Link- https://colorme-api-796496418147.us-central1.run.app
 --
