@@ -436,3 +436,25 @@ html, body {
   -webkit-mask-repeat: no-repeat;
   mix-blend-mode: multiply;
 }
+
+
+/*------color your page-----------*/
+
+.font-copperplate {
+  font-family: 'Copperplate', serif;
+  letter-spacing: 1px;
+}
+
+.font-lucida {
+  font-family: "Lucida Handwriting", "Lucida Sans Unicode", cursive;
+}
+
+.image-frame {
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.image-frame:hover {
+  border-color: #999;
+}
