@@ -52,16 +52,16 @@ Built with love using React, Flask, and Google Cloud.
 ## Installation Steps
 ### Backend Setup (Python)
 
-bash
-cd server
-pip install -r requirements.txt
-python app.py 
+bash  
+cd server  
+pip install -r requirements.txt  
+python app.py  
 
 ### Frontend setup
-cd client
-npm install
-npm run dev
-npm start
+cd client  
+npm install  
+npm run dev  
+npm start  
 
 ### Database Connection
-node index.js
+node index.js  
