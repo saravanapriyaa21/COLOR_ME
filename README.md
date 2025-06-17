@@ -37,9 +37,10 @@ Built with love using React, Flask, and Google Cloud.
 | Hosting     | Google Cloud Run / Cloud Storage    |
 
 ---
-## Forlder Structure
-Coloré/ ├── client/ # React frontend ├── server/ # Flask backend │ ├── app.py # Main API routes │ └── image_data/ # Room base, mask, and output folders ├── colore-service-account.json # Google Cloud credentials (safe file) ├── README.md ├── requirements.txt └── package.json 
+## Folder Structure
+<pre> Coloré/ ├── client/ # React frontend ├── server/ # Flask backend │ ├── app.py # Main API routes │ └── image_data/ # Room base, mask, and output folders ├── colore-service-account.json # Google Cloud credentials (safe file) ├── README.md ├── requirements.txt └── package.json </pre>
 
+---
 ## 🔐 Authentication & Privacy
 
 - Google Vision API is securely accessed via environment credentials.
