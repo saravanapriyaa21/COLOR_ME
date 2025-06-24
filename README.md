@@ -8,7 +8,7 @@ Built with love using React, Flask, and Google Cloud.
 ## Live Demo  
 
 Frontend Link(App hosted)- https://colorme-463016.web.app  
-Backend Link- https://colorme-api-796496418147.us-central1.run.app
+Backend Link- https://colore-796496418147.us-central1.run.app/
 --
 ## Features
 
